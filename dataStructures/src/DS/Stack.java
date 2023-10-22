@@ -22,7 +22,6 @@ public class Stack<T> {
     public void pop() {
         if (isEmpty()) {
             System.out.println("Stack is empty");
-
         } else {
             top--;
         }
@@ -51,17 +50,21 @@ public class Stack<T> {
         return top + 1;
     }
 
-    public void duplicateStack(){
-        Stack<T> tempStack = new Stack<T>(maxSize);
-        while(!isEmpty()){
-            tempStack.push(peek());
+    public void duplicateStack() {
+        Stack<T> tempStack = new Stack<>(maxSize);
+
+        // Copy elements from the original stack to the temporary stack
+        while (!isEmpty()) {
+            T temp = peek();
             pop();
-        }
-        while(!tempStack.isEmpty()){
-            T temp = tempStack.peek();
-            pop();
-            push(temp);
             tempStack.push(temp);
+        }
+
+        // Copy elements back to the original stack while maintaining the order
+        while (!tempStack.isEmpty()) {
+            T temp = tempStack.peek(); // Pop from tempStack
+            tempStack.pop();
+            push(temp); // Push onto the original stack
         }
     }
 
