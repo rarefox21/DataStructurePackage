@@ -15,5 +15,12 @@ public class Main {
         System.out.println("Is empty? " + Stack.isEmpty());
         Stack.duplicateStack();
 
+
+
+
+
+        //Rakin
+
+
     }
 }
