@@ -2,21 +2,27 @@ import DS.*;
 
 public class Main {
     public static void main(String[] args) {
+//ABRAR MUBEEN
+//ID_210042128
+/*
+Stack<Integer> Stack = new Stack<Integer>(5);
+        Stack.push(1);
+        Stack.push(2);
+        Stack.push(3);
+        Stack.push(4);
+        Stack.push(5);
+        Stack.push(6);
+        //Stack.pop();
+        System.out.println("Peek: " + Stack.peek());
+        System.out.println("Peek Nth: " + Stack.peekNth(2));
+        System.out.println("Stack size: " + Stack.size());
+        System.out.println("Is empty? " + Stack.isEmpty());
+        System.out.println("Is full? " + Stack.isFull());
+        Stack.printStack();
+        Stack.duplicateStack();
+       // Stack.mergeStack();
 
-//        Stack<Integer> Stack = new Stack<Integer>(5);
-//        Stack.push(1);
-//        Stack.push(2);
-//        Stack.push(3);
-//
-//        System.out.println("Peek: " + Stack.peek());
-//        Stack.pop();
-//        System.out.println("Peek: " + Stack.peek());
-//        System.out.println("Stack size: " + Stack.size());
-//        System.out.println("Is empty? " + Stack.isEmpty());
-//        Stack.duplicateStack();
-
-
-
+*/
 
 
         //Rakin
