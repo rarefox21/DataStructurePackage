@@ -125,11 +125,11 @@ public class linkedList<E> {
      * @param index
      */
     public void remove(int index) {
-        if (index < 0 || index >= this.size) {
-            System.out.println("Index out of bound");
-        } else if (index == 0) {
-            this.removeFirst();
-        } else if (index == this.size - 1) {
+                if (index < 0 || index >= this.size) {
+                    System.out.println("Index out of bound");
+                } else if (index == 0) {
+                    this.removeFirst();
+                } else if (index == this.size - 1) {
             this.removeLast();
         } else {
             listNode<E> currentNode = this.head;
