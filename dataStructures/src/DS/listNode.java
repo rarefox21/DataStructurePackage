@@ -2,7 +2,7 @@ package DS;
 
 public class listNode<E> {
     private E data;
-    private listNode<E> next;
+    public listNode<E> next;
 
     public listNode(E data){
         this.data = data;

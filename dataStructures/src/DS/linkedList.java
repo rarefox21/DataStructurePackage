@@ -2,6 +2,7 @@ package DS;
 
 
 public class linkedList<E> {
+
     private listNode<E> head;
     private listNode<E> tail;
     private int size;
@@ -9,7 +10,7 @@ public class linkedList<E> {
     /**
      * linkedList Constructor
      */
-    public linkedList(){
+    public linkedList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
@@ -18,9 +19,9 @@ public class linkedList<E> {
     /**
      * print linked list
      */
-    public void printList(){
+    public void printList() {
         listNode<E> currentNode = this.head;
-        while(currentNode != null){
+        while (currentNode != null) {
             currentNode.printNode();
             currentNode = currentNode.getNext();
         }
@@ -28,14 +29,15 @@ public class linkedList<E> {
 
     /**
      * Add element to the first of linked list
+     *
+     * @param element
      */
-    public void addFirst(E element){
+    public void addFirst(E element) {
         listNode<E> newNode = new listNode<E>(element);
-        if(this.head == null){
+        if (this.head == null) {
             this.head = newNode;
             this.tail = newNode;
-        }
-        else{
+        } else {
             newNode.setNext(this.head);
             this.head = newNode;
         }
@@ -44,14 +46,15 @@ public class linkedList<E> {
 
     /**
      * Add element to the last of linked list
+     *
+     * @param element
      */
-    public void addLast(E element){
+    public void addLast(E element) {
         listNode<E> newNode = new listNode<E>(element);
-        if(this.head == null){
+        if (this.head == null) {
             this.head = newNode;
             this.tail = newNode;
-        }
-        else{
+        } else {
             this.tail.setNext(newNode);
             this.tail = newNode;
         }
@@ -60,21 +63,21 @@ public class linkedList<E> {
 
     /**
      * Add element to the index of linked list
+     *
+     * @param index
+     * @param element
      */
-    public void add(int index, E element){
-        if(index < 0 || index > this.size){
+    public void add(int index, E element) {
+        if (index < 0 || index > this.size) {
             System.out.println("Index out of bound");
-        }
-        else if(index == 0){
+        } else if (index == 0) {
             this.addFirst(element);
-        }
-        else if(index == this.size){
+        } else if (index == this.size) {
             this.addLast(element);
-        }
-        else{
+        } else {
             listNode<E> newNode = new listNode<E>(element);
             listNode<E> currentNode = this.head;
-            for(int i = 0; i < index - 1; i++){
+            for (int i = 0; i < index - 1; i++) {
                 currentNode = currentNode.getNext();
             }
             newNode.setNext(currentNode.getNext());
@@ -86,11 +89,10 @@ public class linkedList<E> {
     /**
      * Remove first element of linked list
      */
-    public void removeFirst(){
-        if(this.head == null){
+    public void removeFirst() {
+        if (this.head == null) {
             System.out.println("List is empty");
-        }
-        else{
+        } else {
             this.head = this.head.getNext();
             this.size--;
         }
@@ -99,18 +101,16 @@ public class linkedList<E> {
     /**
      * Remove last element of linked list
      */
-    public void removeLast(){
-        if(this.head == null){
+    public void removeLast() {
+        if (this.head == null) {
             System.out.println("List is empty");
-        }
-        else if(this.head == this.tail){
+        } else if (this.head == this.tail) {
             this.head = null;
             this.tail = null;
             this.size--;
-        }
-        else{
+        } else {
             listNode<E> currentNode = this.head;
-            for(int i = 0; i < this.size - 2; i++){
+            for (int i = 0; i < this.size - 2; i++) {
                 currentNode = currentNode.getNext();
             }
             currentNode.setNext(null);
@@ -121,6 +121,8 @@ public class linkedList<E> {
 
     /**
      * Remove element at index of linked list
+     *
+     * @param index
      */
     public void remove(int index) {
         if (index < 0 || index >= this.size) {
@@ -138,6 +140,7 @@ public class linkedList<E> {
             this.size--;
         }
     }
+
     /**
      * Traversal: visit each node exactly once
      */
@@ -149,19 +152,23 @@ public class linkedList<E> {
         }
 
     }
+
     /**
      * Search: find a particular node containing a given key
+     *
+     * @param key
      */
-    public listNode<E> search(E key) {
+    public boolean search(E key) {
         listNode<E> currentNode = this.head;
         while (currentNode != null) {
             if (currentNode.getData() == key) {
-                return currentNode;
+                return true;
             }
             currentNode = currentNode.getNext();
         }
-        return null;
+        return false;
     }
+
     /**
      * Reversal: reverse the order of the nodes
      */
@@ -177,6 +184,7 @@ public class linkedList<E> {
         }
         this.head = previousNode;
     }
+
     /**
      * Duplicate Removal: remove all duplicate nodes
      */
@@ -193,19 +201,41 @@ public class linkedList<E> {
             currentNode = nextNode;
         }
     }
+
     /**
-     * Merge: merge two  linked lists into one linked list
+     * Merge: merge one list to another list
+     *
+     * @param list2
      */
-    public void merge(linkedList<E> list1, linkedList<E> list2) {
-        listNode<E> currentNode = list1.head;
-        while (currentNode.getNext() != null) {
-            currentNode = currentNode.getNext();
+
+
+    public void mergeList(linkedList list2) {
+        if (this.head == null) {
+            this.head = list2.head;
+            return;
         }
-        currentNode.setNext(list2.head);
-        this.head = list1.head;
-        this.tail = list2.tail;
-        this.size = list1.size + list2.size;
+
+        listNode temp = this.head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = list2.head;
     }
+    /**
+     * print the merged list
+     *
+     * @param list1
+     * @param list2
+     *
+     *
+     */
+//    public void printmergeList(linkedList<E> list1, linkedList<E> list2) {
+//        listNode<E> currentNode = list1.head;
+//        while (currentNode != null) {
+//            currentNode.printNode();
+//            currentNode = currentNode.getNext();
+//        }
+//    }
 
 
 
