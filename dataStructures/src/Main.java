@@ -97,7 +97,41 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //       list1.printList();
 
 
+        //QUEUE
+        /*  queue q = new queue(5);
 
+        //Adding element to queue
+
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
+        q.enqueue(4);
+        q.enqueue(5);
+        q.enqueue(6);
+
+       //remove element from queue
+        q.dequeue();
+
+        // size of queue
+        System.out.println("Size of queue = " + q.size());
+
+        //front element of queue
+        System.out.println("Front element of queue = " + q.front());
+
+        //queue is empty or not
+        System.out.println("Queue is empty ? " + q.isEmpty());
+
+        q.search(5);
+
+        q.printQueue();
+
+        //  q.clear();
+        //print duplicate queue
+       // q.duplicateQueue();
+       // q.reverse();
+
+
+*/
 
 
 
