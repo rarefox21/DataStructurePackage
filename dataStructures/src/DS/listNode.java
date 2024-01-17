@@ -1,7 +1,7 @@
 package DS;
 
 public class listNode<E> {
-    private E data;
+    public E data;
     public listNode<E> next;
 
     public listNode(E data){

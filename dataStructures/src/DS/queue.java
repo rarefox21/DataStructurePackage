@@ -41,6 +41,8 @@ package DS;
 
         /**
          * dequeue element from queue
+         * @return dequeued element
+         *
          */
         public void dequeue(){
             if(front == -1 && rear == -1){
@@ -85,6 +87,7 @@ package DS;
         /**
          * get size of queue
          * @return size of queue
+         *
          */
         public int size(){
             if(front == -1 && rear == -1){
@@ -100,6 +103,7 @@ package DS;
 
         /**
          * print queue
+         *
          */
         public void printQueue(){
             if(front == -1 && rear == -1){
@@ -115,6 +119,7 @@ package DS;
 
         /**
          * clear queue
+         *
          */
         public void clear(){
             front = -1;
@@ -138,16 +143,17 @@ package DS;
         /**
          * duplicate queue
          */
-        public void duplicateQueue() {
-            if (front == -1 && rear == -1) {
+        //duplicate queue and print it
+        public void duplicateQueue(){
+            if(front == -1 && rear == -1){
                 System.out.println("Queue is empty");
-            } else {
-                E temp;
-                for (int i = front, j = rear; i < j; i = (i + 1) % capacity, j = (j - 1) % capacity) {
-                    temp = queueContent[i];
-                    queueContent[i] = queueContent[j];
-                    queueContent[j] = temp;
+            }
+            else{
+                for(int i = front; i != rear; i = (i + 1) % capacity){
+                    enqueue(queueContent[i]);
                 }
+                enqueue(queueContent[rear]);
+               // return queueContent[rear];
             }
         }
         /**
