@@ -10,26 +10,26 @@ public class Stack<T> {
         this.stackArray = (T[]) new Object[maxSize];
         this.top = -1;
     }
-
-    //Add element to the top of the stack
+    //ADDING ELEMENTS TO THE STACK
     public void push(T value) {
         if (isFull()) {
             System.out.println("Stack is full");
         } else {
-            System.out.println("Inserting :" + value);
-            top++;
-            stackArray[top] = value;
+            System.out.println("Inserting " + value);
+            stackArray[++top] = value;
         }
     }
 
-    //Remove element from the top of the stack
-    public T pop() {
+    //REMOVING ELEMENTS FROM THE STACK
+    public void pop() {
         if (isEmpty()) {
-            System.out.println("Stack is Empty");
+            System.out.println("Stack is empty");
+        } else {
+            top--;
         }
-        return stackArray[top--];
     }
 
+    //PEEKING AT THE TOP OF THE STACK
     public T peek() {
         if (isEmpty()) {
             System.out.println("Stack is empty");
@@ -39,72 +39,67 @@ public class Stack<T> {
         }
     }
 
+    //PEEKING AT THE Nth ELEMENT FROM THE TOP OF THE STACK
     public T peekNth(int n) {
         if (isEmpty() || n < 0 || n > top) {
             System.out.println("Invalid operation: Stack is empty or N is out of range");
             return null;
         } else {
-            int index = top-n;
+            int index = top - n;
             return (T) stackArray[index];
         }
     }
 
+    //GETTING THE SIZE OF THE STACK
     public int size() {
-
         return top + 1;
     }
 
+    //DUPLICATING THE STACK
     public void duplicateStack() {
         Stack<T> tempStack = new Stack<>(maxSize);
 
         // Copy elements from the original stack to the temporary stack
         while (!isEmpty()) {
-            //tempStack.push(peek()); // Push the element to tempStack
-            tempStack.push(peek());
+            T temp = peek();
             pop();
-            //show tempStack
-            // System.out.println("tempStack: " + tempStack.peek());
-
+            tempStack.push(temp);
         }
-        //System.out.println("tempStack : ");
-        while (!isEmpty()) {
-           System.out.println("tempStack: " + tempStack.peek());
-        }
-      //  System.out.println("tempStack: " + tempStack.peek());
 
-        /* Copy elements back to the original stack while maintaining the order
+        // Copy elements back to the original stack while maintaining the order
+        System.out.println("Duplicating stack :");
         while (!tempStack.isEmpty()) {
             T temp = tempStack.peek(); // Pop from tempStack
             tempStack.pop();
             push(temp); // Push onto the original stack
         }
-         */
     }
 
-    public void mergeStack() {
+    public void mergeStack(){
         Stack<T> tempStack = new Stack<T>(maxSize);
-        while (!isEmpty()) {
+        while(!isEmpty()){
             tempStack.push(peek());
             pop();
         }
-        while (!tempStack.isEmpty()) {
+        while(!tempStack.isEmpty()){
             push(tempStack.peek());
             tempStack.pop();
         }
     }
 
+    //CHECKING IF THE STACK IS EMPTY
     public boolean isEmpty() {
-
         return (top == -1);
     }
 
+   //CHECKING IF THE STACK IS FULL
     public boolean isFull() {
-
         return (top == maxSize - 1);
     }
 
+    //Print stack
     public void printStack() {
-        System.out.println("The Stack is: ");
+        System.out.println("THE STACK IS: ");
         for (int i = 0; i <= top; i++) {
             System.out.println(stackArray[i]);
         }
