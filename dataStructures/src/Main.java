@@ -1,5 +1,7 @@
 import DS.*;
 
+import java.util.Queue;
+
 public class Main {
     public static void main(String[] args) {
 //ABRAR MUBEEN
@@ -98,7 +100,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
         //QUEUE
-        /*  queue q = new queue(5);
+          queue q = new queue(5);
 
         //Adding element to queue
 
@@ -109,7 +111,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
         q.enqueue(5);
         q.enqueue(6);
 
-       //remove element from queue
+       /* //remove element from queue
         q.dequeue();
 
         // size of queue
@@ -132,6 +134,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
 */
+
 
 
 
