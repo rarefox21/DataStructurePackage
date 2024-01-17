@@ -1,6 +1,8 @@
 package DS;
 
-
+/**
+ * @author Md. Rakin
+ */
 public class AVL<T extends Comparable<T>> implements tree<T> {
     private Node<T> root;
     private int nodeCount = 0;
@@ -276,7 +278,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
      * @param node
      * @return Node<T>
      */
-    private Node<T> minValueNode(Node<T> node) {
+    public Node<T> minValueNode(Node<T> node) {
         Node<T> current = node;
         while (current.left != null) {
             current = current.left;
@@ -344,6 +346,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
     /**
      * Tree Copy/Clone
      *
+     *
      * @return AVL<T>
      */
     public AVL<T> cloneTree() {
@@ -368,6 +371,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
 
     /**
      * Find Lowest Common Ancestor
+     *
      *
      * @return AVL<T>
      */
@@ -398,6 +402,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
 
     /**
      * Subtree Search
+     *
      *
      * @return AVL<T>
      */
@@ -440,6 +445,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
     /**
      * Path Sum
      *
+     *
      * @return AVL<T>
      */
 
@@ -480,32 +486,12 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
     }
 
 
-    /**
-     * Serialization
-     *
-     * @return String
-     */
-    public String serialize() {
-        StringBuilder serializedTree = new StringBuilder();
-        serialize((Node<T>) root, serializedTree);
-        return serializedTree.toString();
-    }
 
-    private void serialize(Node<T> node, StringBuilder serializedTree) {
-        if (node == null) {
-            serializedTree.append("null ");
-            return;
-        }
-
-        // Append current node's data and recursively serialize left and right subtrees
-        serializedTree.append(node.data).append(" ");
-        serialize(node.left, serializedTree);
-        serialize(node.right, serializedTree);
-    }
 
 
         /**
          * Diameter Calculation
+         *
          * @return int
          */
         public int calculateDiameter() {
@@ -533,7 +519,7 @@ public class AVL<T extends Comparable<T>> implements tree<T> {
         }
 
 
-        // ... (rest of the AVL tree methods)
+
     }
 
 

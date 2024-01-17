@@ -100,17 +100,17 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
         //QUEUE
-          queue q = new queue(5);
-
-        //Adding element to queue
-
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.enqueue(5);
-        q.enqueue(6);
-        q.printQueue();
+//          queue q = new queue(5);
+//
+//        //Adding element to queue
+//
+//        q.enqueue(1);
+//        q.enqueue(2);
+//        q.enqueue(3);
+//        q.enqueue(4);
+//        q.enqueue(5);
+//        q.enqueue(6);
+//        q.printQueue();
 
 
        //remove element from queue
@@ -135,7 +135,170 @@ Stack<Integer> Stack = new Stack<Integer>(5);
        // q.reverse();
 
 
+
+
+
 */
+        //bst
+//        BST<Integer> bst = new BST<Integer>();
+//        bst.insert(5);
+//        bst.insert(3);
+//        bst.insert(7);
+//        bst.insert(2);
+//        bst.insert(4);
+//        bst.insert(6);
+//
+//        bst.traverse(travarseTech.INORDER);
+//        System.out.println();
+//        bst.traverse(travarseTech.PREORDER);
+//        System.out.println();
+//        bst.traverse(travarseTech.POSTORDER);
+//        System.out.println();
+//        bst.traverse(travarseTech.LEVELORDER);
+//        System.out.println();
+
+        //delete node
+//        bst.delete(new Node<Integer>(5));
+//        bst.traverse(travarseTech.INORDER);
+
+        //search node
+//        System.out.println(bst.search(5));
+//        System.out.println(bst.search(2));
+
+        //get root
+//        System.out.println(bst.getRoot().getData());
+
+        //set root
+//        bst.setRoot(new Node<Integer>(10));
+//        System.out.println(bst.getRoot().getData());
+
+        //node count
+//          System.out.println(bst.nodeCount());
+
+            //height
+//          System.out.println(bst.height());
+
+        //copy tree
+//            BST<Integer> bst2 = bst.copy();
+//            bst2.traverse(travarseTech.INORDER);
+//            System.out.println();
+//
+//            //count nodes
+//            System.out.println(bst.countNodes());
+//            System.out.println(bst2.countNodes());
+//
+//            //isSubtree
+//            System.out.println(bst.isSubtree(bst2));
+
+
+//            //calculateDiameter
+//            System.out.println(bst.calculateDiameter());
+//
+//            //height
+//            System.out.println(bst.height());
+
+//            //findLowestCommonAncesstor
+//            System.out.println(bst.findLowestCommonAncestor(2, 4));
+
+
+
+        //avl
+          AVL<Integer> avl = new AVL<Integer>();
+            avl.insert(5);
+            avl.insert(3);
+            avl.insert(7);
+            avl.insert(2);
+            avl.insert(4);
+            avl.insert(6);
+
+            AVL<Integer> avl2 = new AVL<Integer>();
+
+            avl2.insert(5);
+            avl2.insert(3);
+            avl2.insert(7);
+            avl2.insert(2);
+            avl2.insert(4);
+            avl2.insert(6);
+
+
+//            avl.traverse(travarseTech.INORDER);
+//            System.out.println();
+//            avl.traverse(travarseTech.PREORDER);
+//            System.out.println();
+//            avl.traverse(travarseTech.POSTORDER);
+//            System.out.println();
+//            avl.traverse(travarseTech.LEVELORDER);
+//            System.out.println();
+
+
+  //            delete node
+//            avl.delete(new Node<Integer>(5));
+//            avl.traverse(travarseTech.INORDER);
+//            System.out.println();
+//            avl.traverse(travarseTech.LEVELORDER);
+//            System.out.println();
+
+        //search node
+//        System.out.println(avl.search(5));
+//
+//        //get root
+//        System.out.println(avl.getRoot().getData());
+//
+//            //set root
+//            avl.setRoot(new Node<Integer>(10));
+//            System.out.println(avl.getRoot().getData());
+
+            //node count
+
+//            System.out.println(avl.nodeCount());
+
+                //height
+//            System.out.println(avl.height());
+
+            //node count
+
+//            System.out.println(avl.nodeCount());
+//
+//                //minValueNode
+//            System.out.println(avl.minValueNode(avl.getRoot()).getData());
+//
+
+//clone tree
+//            AVL<Integer> avl2 = avl.cloneTree();
+//            avl2.traverse(travarseTech.INORDER);
+//            System.out.println();
+
+
+        //findLowestCommonAncesstor
+//            System.out.println(avl.findLCA(2, 4));
+
+        //isSubtree
+//            System.out.println(avl.isSubtree(avl2));
+        //haspathsum
+//            System.out.println(avl.hasPathSum(12));
+
+        //calculateDiameter
+//            System.out.println(avl.calculateDiameter());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

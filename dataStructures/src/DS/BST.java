@@ -181,7 +181,9 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * Get the root of the tree
+     * @param root
      * @return Node<T>
+     *
      */
     public Node<T> getRoot() {
         if (root == null){
@@ -203,6 +205,7 @@ public class BST<T extends Comparable<T> > implements tree<T>{
     @Override
     /**
      * Get the number of nodes in the tree
+     * @param root
      * @return int
      */
     public int nodeCount() {
@@ -325,6 +328,7 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * Tree Copy/Clone
+
      * @return BST<T>
      */
     public BST<T> copy() {
@@ -345,6 +349,8 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * count the number of nodes in the tree
+
+     * @return int
      */
     public int countNodes() {
         return countNodes(root);
@@ -359,6 +365,9 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * lowest common ancestor
+     * @param value1
+     * @param value2
+     * @return T
      */
     public T findLowestCommonAncestor(T value1, T value2) {
         return findLowestCommonAncestor(root, value1, value2);
@@ -381,6 +390,9 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * subtree search
+     * @param subtree
+     * @return boolean
+     *
      */
     public boolean isSubtree(BST<T> subtree) {
         return isSubtree(root, subtree.root);
@@ -402,6 +414,9 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * path sum
+     * @param targetSum
+     * @return boolean
+     *
      */
     public boolean hasPathSum(T targetSum) {
         return hasPathSum(root, targetSum);
@@ -429,6 +444,8 @@ public class BST<T extends Comparable<T> > implements tree<T>{
 
     /**
      * diameter calculation
+     * @return int
+     *
      */
 
     public int calculateDiameter() {
