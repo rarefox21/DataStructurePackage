@@ -52,22 +52,21 @@ Stack<Integer> Stack = new Stack<Integer>(5);
         q.enqueue(4);
         q.enqueue(5);
         q.enqueue(6);
-=======
-*/
->>>>>>> e1e11a9bab708d3ff1115c35f082fa16b2afa130
+
+
 
        //remove element from queue
         q.dequeue();
 
-<<<<<<< HEAD
+
         // size of queue
         System.out.println("Size of queue = " + q.size());
-=======
+
         //Rakin
 
 
         //linkedList<Integer> list = new linkedList<Integer>();
->>>>>>> e1e11a9bab708d3ff1115c35f082fa16b2afa130
+
 
         //front element of queue
         System.out.println("Front element of queue = " + q.front());
@@ -75,7 +74,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
         //queue is empty or not
         System.out.println("Queue is empty ? " + q.isEmpty());
 
-<<<<<<< HEAD
+
         q.search(5);
 
         q.printQueue();
@@ -85,8 +84,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
        // q.duplicateQueue();
        // q.reverse();
        */
-        Heap heap = new Heap(10);
-=======
+
 //        // implimentation addFirst(E element)
 //        list.addFirst(0);
 //
@@ -113,7 +111,8 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        // implimentation printmergeList()
 //        list1.merge(list1, list2);
 //        list1.printList();
->>>>>>> e1e11a9bab708d3ff1115c35f082fa16b2afa130
+
+        Heap heap = new Heap(10);
 
         // Insert elements
         heap.insert(80);
@@ -138,16 +137,32 @@ Stack<Integer> Stack = new Stack<Integer>(5);
         // Delete root
         heap.delete(0);
 
-<<<<<<< HEAD
         // Print heap after deletion
         System.out.println("Heap after deletion:");
         for (int i = 0; i < heap.size; i++) {
             System.out.println(heap.heap[i]);
         }
-        // Print max and min elements
-        System.out.println("Max element: " + heap.maxElement());
-        System.out.println("Min element: " + heap.minElement());
-=======
+
+        // Heapify a new array
+        int[] newArray = {20, 15, 30, 25, 35};
+        heap.heapify(newArray);
+
+        // Print heap after heapify
+        System.out.println("Heap after heapify:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+
+        // Heap sort
+        heap.heapSort();
+
+        // Print heap after sort
+        System.out.println("Heap after sort:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+    }
+
         //QUEUE
 //          queue q = new queue(5);
 //
@@ -250,7 +265,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //            System.out.println(bst.findLowestCommonAncestor(2, 4));
 
 
-
+/*
         //avl
           AVL<Integer> avl = new AVL<Integer>();
             avl.insert(5);
@@ -268,7 +283,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
             avl2.insert(2);
             avl2.insert(4);
             avl2.insert(6);
-
+*/
 
 //            avl.traverse(travarseTech.INORDER);
 //            System.out.println();
@@ -328,47 +343,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
         //calculateDiameter
 //            System.out.println(avl.calculateDiameter());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> e1e11a9bab708d3ff1115c35f082fa16b2afa130
-
-        // Heapify a new array
-        int[] newArray = {20, 15, 30, 25, 35};
-        heap.heapify(newArray);
-
-        // Print heap after heapify
-        System.out.println("Heap after heapify:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-
-        // Heap sort
-        heap.heapSort();
-
-        // Print heap after sort
-        System.out.println("Heap after sort:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-
-    }
+    
 
 
 
