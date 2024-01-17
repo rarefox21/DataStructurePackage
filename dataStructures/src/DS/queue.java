@@ -41,6 +41,8 @@ package DS;
 
         /**
          * dequeue element from queue
+         * @return dequeued element
+         *
          */
         public void dequeue(){
             if(front == -1 && rear == -1){
@@ -85,6 +87,7 @@ package DS;
         /**
          * get size of queue
          * @return size of queue
+         *
          */
         public int size(){
             if(front == -1 && rear == -1){
@@ -100,6 +103,7 @@ package DS;
 
         /**
          * print queue
+         *
          */
         public void printQueue(){
             if(front == -1 && rear == -1){
@@ -115,6 +119,7 @@ package DS;
 
         /**
          * clear queue
+         *
          */
         public void clear(){
             front = -1;

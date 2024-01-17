@@ -221,21 +221,6 @@ public class linkedList<E> {
         }
         temp.next = list2.head;
     }
-    /**
-     * print the merged list
-     *
-     * @param list1
-     * @param list2
-     *
-     *
-     */
-//    public void printmergeList(linkedList<E> list1, linkedList<E> list2) {
-//        listNode<E> currentNode = list1.head;
-//        while (currentNode != null) {
-//            currentNode.printNode();
-//            currentNode = currentNode.getNext();
-//        }
-//    }
 
 
 

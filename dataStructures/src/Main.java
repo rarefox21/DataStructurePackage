@@ -26,6 +26,8 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
         //Rakin
+
+
         //linkedList<Integer> list = new linkedList<Integer>();
 
         // implimentation add(int index, E element)
@@ -45,18 +47,18 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        list.duplicateRemoval();
 //
         // implimentation merge(linkedList<E> list1, linkedList<E> list2)
-        linkedList<Integer> list1 = new linkedList<Integer>();
-        linkedList<Integer> list2 = new linkedList<Integer>();
-        list1.add(0, 1);
-        list1.add(1, 2);
-        list1.add(2, 3);
-        list2.add(0, 4);
-        list2.add(1, 5);
-        list2.add(2, 6);
-
-        list1.mergeList(list2);
-
-        list1.printList();
+//        linkedList<Integer> list1 = new linkedList<Integer>();
+//        linkedList<Integer> list2 = new linkedList<Integer>();
+//        list1.add(0, 1);
+//        list1.add(1, 2);
+//        list1.add(2, 3);
+//        list2.add(0, 4);
+//        list2.add(1, 5);
+//        list2.add(2, 6);
+//
+//        list1.mergeList(list2);
+//
+//        list1.printList();
 //
 //        // implimentation printmergeList()
 //        list1.merge(list1, list2);
@@ -98,7 +100,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
         //QUEUE
-        /*  queue q = new queue(5);
+          queue q = new queue(5);
 
         //Adding element to queue
 
@@ -108,9 +110,11 @@ Stack<Integer> Stack = new Stack<Integer>(5);
         q.enqueue(4);
         q.enqueue(5);
         q.enqueue(6);
+        q.printQueue();
+
 
        //remove element from queue
-        q.dequeue();
+       /* q.dequeue();
 
         // size of queue
         System.out.println("Size of queue = " + q.size());
@@ -137,4 +141,11 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
     }
+
+
+
+
+
+
+
 }
