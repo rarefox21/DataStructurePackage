@@ -137,40 +137,28 @@ public class DoublyLinkedList {
      */
 
     public void insert(int data, int index) {
+        if (index < 0 || index > this.length) {
+            System.out.println("Invalid index");
+            return;
+        }
+        if (index == 0) {
+            this.insertAtHead(data);
+            return;
+        }
+        if (index == this.length) {
+            this.insertAtTail(data);
+            return;
+        }
         DoublyNode newNode = new DoublyNode(data);
-
-        if (head == null) {
-            if (index != 0) {
-                return;
-            } else {
-                head = newNode;
-            }
+        DoublyNode temp = this.head;
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.getNext();
         }
-
-        if (head != null && index == 0) {
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
-        }
-
-        DoublyNode current = head;
-        int i = 0;
-
-        while (current != null) {
-            if (i + 1 == index) {
-                if (current.next != null) {
-                    newNode.next = current.next;
-                    newNode.next.prev = newNode;
-                }
-
-                current.next = newNode;
-                newNode.prev = current;
-                break;
-            }
-
-            current = current.next;
-            i++;
-        }
+        newNode.setNext(temp.getNext());
+        newNode.setPrev(temp);
+        temp.getNext().setPrev(newNode);
+        temp.setNext(newNode);
+        this.length++;
     }
 
 
@@ -318,8 +306,6 @@ public class DoublyLinkedList {
         current.next = list.head;
         list.head.prev = current;
     }
-
-
 
 
 
