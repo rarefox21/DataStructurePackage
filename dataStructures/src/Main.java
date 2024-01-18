@@ -1,47 +1,89 @@
 import DS.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+        {
 //ABRAR MUBEEN
 //ID_210042128
 /*
-Stack<Integer> Stack = new Stack<Integer>(5);
-        Stack.push(1);
-        Stack.push(2);
-        Stack.push(3);
-        Stack.push(4);
-        Stack.push(5);
-        Stack.push(6);
-        //Stack.pop();
-        System.out.println("Peek: " + Stack.peek());
-        System.out.println("Peek Nth: " + Stack.peekNth(2));
-        System.out.println("Stack size: " + Stack.size());
-        System.out.println("Is empty? " + Stack.isEmpty());
-        System.out.println("Is full? " + Stack.isFull());
-        Stack.printStack();
-        Stack.duplicateStack();
-       // Stack.mergeStack();
+//Stack
 
-<<<<<<< HEAD
-   /*     Stack<Integer> Stack = new Stack<Integer>(5);
-        Stack.push(1);
-        Stack.push(2);
-        Stack.push(3);
-        Stack.push(4);
-        Stack.push(5);
-        Stack.push(6);
-        //Stack.pop();
-        System.out.println("Peek: " + Stack.peek());
-        System.out.println("Peek Nth: " + Stack.peekNth(2));
-        System.out.println("Stack size: " + Stack.size());
-        System.out.println("Is empty? " + Stack.isEmpty());
-        System.out.println("Is full? " + Stack.isFull());
-        Stack.printStack();
-        Stack.duplicateStack();
-       // Stack.mergeStack();
-       */
+            Stack<Integer> Stack = new Stack<Integer>( 5 );
+            Stack.push( 1 );
+            Stack.push( 2 );
+            Stack.push( 3 );
+            Stack.push( 4 );
+            Stack.push( 5 );
+            Stack.push( 6 );
+            //Stack.pop();
+            System.out.println( "Peek: " + Stack.peek() );
+            System.out.println( "Peek Nth: " + Stack.peekNth( 2 ) );
+            System.out.println( "Stack size: " + Stack.size() );
+            System.out.println( "Is empty? " + Stack.isEmpty() );
+            System.out.println( "Is full? " + Stack.isFull() );
+            Stack.printStack();
+            Stack.duplicateStack();
+            // Stack.mergeStack();
 
-/*
+
+ */
+             /*
+        //Heap
+        Heap heap = new Heap(10);
+
+        // Insert elements
+        heap.insert(80);
+        heap.insert(75);
+        heap.insert(60);
+        heap.insert(68);
+        heap.insert(55);
+        heap.insert(40);
+        heap.insert(52);
+        heap.insert(67);
+
+        // Print heap after insertion
+        System.out.println("Heap after insertion:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+
+        // Print max and min elements
+        System.out.println("Max element: " + heap.maxElement());
+        System.out.println("Min element: " + heap.minElement());
+
+        // Delete root
+        heap.delete(0);
+
+        // Print heap after deletion
+        System.out.println("Heap after deletion:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+
+        // Heapify a new array
+        int[] newArray = {20, 15, 30, 25, 35};
+        heap.heapify(newArray);
+
+        // Print heap after heapify
+        System.out.println("Heap after heapify:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+
+        // Heap sort
+        heap.heapSort();
+
+        // Print heap after sort
+        System.out.println("Heap after sort:");
+        for (int i = 0; i < heap.size; i++) {
+            System.out.println(heap.heap[i]);
+        }
+    }
+
+
+         */
+
+       /*
         queue q = new queue(5);
 
         //Adding element to queue
@@ -94,7 +136,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        // implimentation duplicateRemoval()
 //        list.duplicateRemoval();
 //
-        // implimentation merge(linkedList<E> list1, linkedList<E> list2)
+            // implimentation merge(linkedList<E> list1, linkedList<E> list2)
 //        linkedList<Integer> list1 = new linkedList<Integer>();
 //        linkedList<Integer> list2 = new linkedList<Integer>();
 //        list1.add(0, 1);
@@ -112,58 +154,8 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        list1.merge(list1, list2);
 //        list1.printList();
 
-        Heap heap = new Heap(10);
 
-        // Insert elements
-        heap.insert(80);
-        heap.insert(75);
-        heap.insert(60);
-        heap.insert(68);
-        heap.insert(55);
-        heap.insert(40);
-        heap.insert(52);
-        heap.insert(67);
-
-        // Print heap after insertion
-        System.out.println("Heap after insertion:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-
-        // Print max and min elements
-        System.out.println("Max element: " + heap.maxElement());
-        System.out.println("Min element: " + heap.minElement());
-
-        // Delete root
-        heap.delete(0);
-
-        // Print heap after deletion
-        System.out.println("Heap after deletion:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-
-        // Heapify a new array
-        int[] newArray = {20, 15, 30, 25, 35};
-        heap.heapify(newArray);
-
-        // Print heap after heapify
-        System.out.println("Heap after heapify:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-
-        // Heap sort
-        heap.heapSort();
-
-        // Print heap after sort
-        System.out.println("Heap after sort:");
-        for (int i = 0; i < heap.size; i++) {
-            System.out.println(heap.heap[i]);
-        }
-    }
-
-        //QUEUE
+            //QUEUE
 //          queue q = new queue(5);
 //
 //        //Adding element to queue
@@ -177,7 +169,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        q.printQueue();
 
 
-       //remove element from queue
+            //remove element from queue
        /* q.dequeue();
 
         // size of queue
@@ -203,7 +195,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 
 */
-        //bst
+            //bst
 //        BST<Integer> bst = new BST<Integer>();
 //        bst.insert(5);
 //        bst.insert(3);
@@ -221,28 +213,28 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //        bst.traverse(travarseTech.LEVELORDER);
 //        System.out.println();
 
-        //delete node
+            //delete node
 //        bst.delete(new Node<Integer>(5));
 //        bst.traverse(travarseTech.INORDER);
 
-        //search node
+            //search node
 //        System.out.println(bst.search(5));
 //        System.out.println(bst.search(2));
 
-        //get root
+            //get root
 //        System.out.println(bst.getRoot().getData());
 
-        //set root
+            //set root
 //        bst.setRoot(new Node<Integer>(10));
 //        System.out.println(bst.getRoot().getData());
 
-        //node count
+            //node count
 //          System.out.println(bst.nodeCount());
 
             //height
 //          System.out.println(bst.height());
 
-        //copy tree
+            //copy tree
 //            BST<Integer> bst2 = bst.copy();
 //            bst2.traverse(travarseTech.INORDER);
 //            System.out.println();
@@ -295,14 +287,14 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //            System.out.println();
 
 
-  //            delete node
+            //            delete node
 //            avl.delete(new Node<Integer>(5));
 //            avl.traverse(travarseTech.INORDER);
 //            System.out.println();
 //            avl.traverse(travarseTech.LEVELORDER);
 //            System.out.println();
 
-        //search node
+            //search node
 //        System.out.println(avl.search(5));
 //
 //        //get root
@@ -316,7 +308,7 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 
 //            System.out.println(avl.nodeCount());
 
-                //height
+            //height
 //            System.out.println(avl.height());
 
             //node count
@@ -333,22 +325,18 @@ Stack<Integer> Stack = new Stack<Integer>(5);
 //            System.out.println();
 
 
-        //findLowestCommonAncesstor
+            //findLowestCommonAncesstor
 //            System.out.println(avl.findLCA(2, 4));
 
-        //isSubtree
+            //isSubtree
 //            System.out.println(avl.isSubtree(avl2));
-        //haspathsum
+            //haspathsum
 //            System.out.println(avl.hasPathSum(12));
 
-        //calculateDiameter
+            //calculateDiameter
 //            System.out.println(avl.calculateDiameter());
-    
 
 
-
-
-
-
+        }
 
 }
