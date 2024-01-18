@@ -96,7 +96,7 @@ public class Stack<T> {
     public boolean isFull() {
         return (top == maxSize - 1);
     }
-    
+
     //Print stack
     public void printStack() {
         System.out.println("THE STACK IS: ");

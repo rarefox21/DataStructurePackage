@@ -143,16 +143,17 @@ package DS;
         /**
          * duplicate queue
          */
-        public void duplicateQueue() {
-            if (front == -1 && rear == -1) {
+        //duplicate queue and print it
+        public void duplicateQueue(){
+            if(front == -1 && rear == -1){
                 System.out.println("Queue is empty");
-            } else {
-                E temp;
-                for (int i = front, j = rear; i < j; i = (i + 1) % capacity, j = (j - 1) % capacity) {
-                    temp = queueContent[i];
-                    queueContent[i] = queueContent[j];
-                    queueContent[j] = temp;
+            }
+            else{
+                for(int i = front; i != rear; i = (i + 1) % capacity){
+                    enqueue(queueContent[i]);
                 }
+                enqueue(queueContent[rear]);
+               // return queueContent[rear];
             }
         }
         /**
